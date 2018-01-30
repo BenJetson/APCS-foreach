@@ -63,6 +63,7 @@ public class EnhancedForLoop
         }
 
         meanTest();
+        maxTest();
     }
         
 
@@ -89,7 +90,18 @@ public class EnhancedForLoop
         //      for loop to return the maximum value of the elements in
         //      nums. Then test the method.
 
+        public static double max(double nums[]) {
+            double max = nums[0];
+            for (double d: nums) {
+                if (d > max) max = d;
+            }
+            return max;
+        }
 
+        public static void maxTest() {
+            System.out.println(max(new double[] {29.321, 823.23, 12.83923, 99.001239999}));
+            System.out.println(max(new double[] {9, 2, 19, 23, 1, 4, 9}));
+        }
 
         
         // #3 - Write a method sumEvenVals that uses an enhanced for 
