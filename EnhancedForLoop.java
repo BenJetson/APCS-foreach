@@ -13,6 +13,10 @@ public class EnhancedForLoop
             System.out.print(x + " ");
         System.out.println();
         
+        /**
+         * 4 5 1 2 3 8
+         */
+
         // Ex. 2
         for (int x: arr)
             x++; // remember, x is a copy of each item in the array
@@ -21,7 +25,11 @@ public class EnhancedForLoop
             System.out.print(x + " ");
         System.out.println();
         
-        // Ex. 3
+        /**
+         * 4 5 1 2 3 8
+         */        
+
+         // Ex. 3
         for (int i=0; i<arr.length; i++)
             arr[i]++; // now we are actually changing elements in the array
             
@@ -29,9 +37,12 @@ public class EnhancedForLoop
             System.out.print(x + " ");
         System.out.println();
         
+        /**
+         * 5 6 2 3 4 9
+         */
         
         // Ex. 4
-        Pet[]   pets = {new Pet("Phineas"),new Pet("Ferb"),new Pet("Perry")};
+        Pet[] pets = {new Pet("Phineas"),new Pet("Ferb"),new Pet("Perry")};
         
         for (Pet p : pets)
             p.sleep();
@@ -50,13 +61,28 @@ public class EnhancedForLoop
             morePets.remove(i);
             p.eat();
         }
+
+        meanTest();
+    }
+        
+
         /********** Your turn **********/
         
         // #1 - Write a method mean(double nums[]) which uses an enhanced
         //      for loop to return the mean of the elements in nums. Test
         //      the method here.
         
-        
+        public static double mean(double[] nums) {
+            double sum = 0;
+            for(double n : nums) {
+                sum += n;
+            }
+            return sum / nums.length;
+        }
+
+        public static void meanTest() {
+            System.out.println(mean(new double[] {3.52, 8.42, 3.79, 9.25}));
+        }
         
 
         // #2 - Write a method max(double nums[]) which uses an enhanced
@@ -92,5 +118,5 @@ public class EnhancedForLoop
         
         
         
-    }
+    
 }
