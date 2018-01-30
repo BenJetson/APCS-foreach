@@ -64,6 +64,7 @@ public class EnhancedForLoop
 
         meanTest();
         maxTest();
+        sumEvenTest();
     }
         
 
@@ -108,8 +109,17 @@ public class EnhancedForLoop
         //      loop to return the sum of all even values stored in an 
         //      Array.  Then test the method.
 
+        public static double sumEvens(double[] nums) {
+            double sum = 0;
+            for (double d: nums) {
+                if (d % 2 == 0) sum += d;
+            }
+            return sum;
+        }
 
-
+        public static void sumEvenTest() {
+            System.out.println(sumEvens(new double[] {2, 4, 1, 3, 7, 8, 2, 14, 3, 13, 7}));
+        }
 
         // #4 - Write a method vowelCount that uses an enhanced for loop
         //      to count the number of vowels (a,e,o,u only) in a list
